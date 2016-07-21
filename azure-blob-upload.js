@@ -38,6 +38,7 @@
                             headers: {
                                 'x-ms-blob-type': 'BlockBlob',
                                 'Content-Type': state.file.type,
+                                'ignoreAuthorizationHeader': true
                             },
                             transformRequest: [],
                         }).success(function (data, status, headers, config) {
@@ -149,6 +150,7 @@
             {
                 headers: {
                     'x-ms-blob-content-type': state.file.type,
+                    'ignoreAuthorizationHeader': true
                 }
             }).success(function (data, status, headers, config) {
                 $log.log(data);
